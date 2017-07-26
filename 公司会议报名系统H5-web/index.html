@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <title>首页</title>
+	<link href="css/public.css" rel="stylesheet">
+</head>
+<body>
+<!--########################-S-以下部分是嵌套所需部分-############################-->
+<link href="css/mobile.css" rel="stylesheet">
+<div class="wrapper-index wrapper">
+    <header class="header">
+        <img src="images/banner.jpg" alt="">
+    </header>
+	<section class="content-wrap content-mask">
+        <section class="style01">
+            <div class="school-name table-form">
+                <div class="hd"><label for="txtSchoolName">单位全称</label></div>
+                <div class="bd">
+                    <input class="input-text" id="txtSchoolName" name="school-name" type="text" placeholder="请务必填写单位全称"/>
+                </div>
+            </div>
+            <div class="people table-form">
+                <div class="hd"><label for="name">姓名</label></div>
+                <div class="bd"><input class="input-text" id="name" name="name" type="text" placeholder=""/></div>
+            </div>
+            <div class="contact table-form">
+                <div class="hd"><label for="txtPhone">手机号码</label></div>
+                <div class="bd"><input class="input-text" id="txtPhone" name="name" type="text" placeholder=""/></div>
+            </div>
+            <div class="meet-select table-form">
+                <div class="hd"><label for="number">参会人数</label></div>
+                <div class="bd">
+                    <select class="sle" id="number">
+                        <option value="请选择人数">请选择人数</option>
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                    </select>
+                    <div class="people-message people-message1">
+                        <input class="input-text1" name="name" type="text" placeholder="姓名"/>
+                        <select class="sle1">
+                            <option>性别</option>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                        <input class="input-text1 input-text2" name="name" type="text" placeholder="职务"/>
+                    </div>
+                    <div class="people-message people-message2">
+                        <input class="input-text1" name="name" type="text" placeholder="姓名"/>
+                        <select class="sle1">
+                            <option>性别</option>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                        <input class="input-text1 input-text2" name="name" type="text" placeholder="职务"/>
+                    </div>
+                </div>
+            </div>
+            <div class="meet-select table-form">
+                <div class="hd"><label for="message">开票信息</label></div>
+                <div class="bd">
+                    <input type="text" class="input-area" id="message" placeholder="开普通发票，请填写单位全称"/>
+                </div>
+            </div>
+            <div class="remarks table-form">
+                <div class="hd"><label for="remarks-input">备注</label></div>
+                <div class="bd">
+                    <input type="text" class="input-text" id="remarks-input" name="remarks-input" placeholder=" 请备注打款单位或个人姓名"/>
+                </div>
+            </div>
+            <div class="button">
+                <input class="btn01" type="submit" value="提交"/>
+                <input class="btn02" type="reset" value="重置"/>
+            </div>
+        </section>
+        <section class="style02">
+            <h2>报名须知</h2>
+            <p>1.由于参会总人数有限，每个单位限2人参加。</p>
+            <p>
+                <span>2.会务费及付款方式</span>
+                <span>会务费1180元/人，请将会务费打到以下账户：</span>
+                <strong>单位全称：浙江万朋教育科技股份有限公司</strong>
+                <strong>开户行：招商银行杭州高新支行</strong>
+                <strong>账号：663581233210001</strong>
+                <strong>联行号: 308331012079</strong>
+            </p>
+            <p>3.本次会议主会场设在杭州宝盛水博园大酒店，由于主会场客房量有限，超额部分需安排到周边其他酒店（提供车辆接送至主会场），届时将按缴费顺序安排房间。报名成功后，请尽快缴费。</p>
+            <p>4.请在报名时提供开票信息，便于及时开票；若是个人账户打款，请务必在打款时注明单位名称。</p>
+            <p>5.报名截止：3月25日 24:00</p>
+        </section>
+	</section>
+    <section class="mask">
+        <div class="mask-main mask-school">
+            <img src="images/icon01.png"/>
+            <p>请填写单位全称</p>
+        </div>
+        <div class="mask-main mask-detail">
+            <img src="images/icon02.png"/>
+            <p>请填写完整</p>
+        </div>
+        <div class="mask-main mask-repeat">
+            <img src="images/icon02.png"/>
+            <p>不能重复报名</p>
+        </div>
+        <div class="mask-main mask-success">
+            <img src="images/icon02.png"/>
+            <p>报名成功<br/>请及时缴费</p>
+        </div>
+        <div class="mask-main mask-fail">
+            <img src="images/icon03.png"/>
+            <p>提交失败</p>
+        </div>
+    </section>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/mobile.js"></script>
+<script>
+
+    //提交成功
+    function submit01(){
+        $(".mask").show(100).delay(3000).hide(100);
+        $(".mask-success").show();
+    }
+    //提交失败
+    function submit02(){
+        $(".mask").show(100).delay(3000).hide(100);
+        $(".mask-fail").show();
+    }
+    //请填写完整
+    function submit03(){
+        $(".mask").show(100).delay(3000).hide(100);
+        $(".mask-detail").show();
+    }
+    //不能重复报名
+    function submit04(){
+        $(".mask").show(100).delay(3000).hide(100);
+        $(".mask-repeat").show();
+    }
+
+</script>
+<!--########################-E-以上部分是嵌套所需部分-end-############################-->	
+</body>
+</html>
